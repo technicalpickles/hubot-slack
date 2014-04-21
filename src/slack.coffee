@@ -210,7 +210,7 @@ class Slack extends Adapter
 
       response.on "end", ->
         if response.statusCode >= 400
-          self.logError "Slack services error: #{response.statusCode}"
+          self.logError "Slack services error: #{response.statusCode}: #{data}"
           self.logError data
 
         #console.log "HTTPS response:", data
